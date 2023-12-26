@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+     * {
+            box-sizing: border-box;
+        }
+
+        form {
+            padding: 1%;
+        }
+
+        /* Style the search field */
+        form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border-radius: 5px; /* Adjusted border-radius for a cleaner look */
+        border: 1px solid grey;
+        float: left;
+        width: 60%; /* Adjusted width for responsiveness */
+        background: #f1f1f1;
+        margin-right: 2%; /* Added margin for separation */
+    }
+
+    /* Style the submit button */
+    form.example button {
+        float: left;
+        width: 20%; /* Adjusted width for responsiveness */
+        padding: 10px;
+        border-radius: 5px; /* Adjusted border-radius for consistency */
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        cursor: pointer;
+    }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .cards {
+            padding: 1%;
+            margin: 1%;
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow cards to wrap to the next line */
+        }
+
+        .col {
+            padding: 1%;
+            flex: 1;
+            /* Distribute available space equally among columns */
+            min-width: 100%; /* Adjusted width for responsiveness */
+            box-sizing: border-box;
+            /* Include padding in column width */
+        }
+
+        .card {
+            height: 100%;
+            /* Ensure the card takes the full height of the column */
+            display: flex;
+            flex-direction: column;
+            /* Align children in a column */
+        }
+
+        .crd-img {
+            padding: 1%;
+            width: 100%;
+            /* Allow the image to grow and take available space */
+            object-fit: cover;
+            /* Ensure the image covers the entire container */
+        }
+
+        /* Media Queries for responsiveness */
+        @media screen and (min-width: 576px) {
+            form.example input[type=text],
+            form.example button {
+                width: 48%; /* Adjusted width for responsiveness */
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .col {
+                min-width: 48%; /* Adjusted width for responsiveness */
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .col {
+                min-width: 48%; /* Adjusted width for responsiveness */
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .col {
+                min-width: 23%; /* Adjusted width for responsiveness */
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+
+    <!-- The form -->
+    <form class="example">
+      <input type="text" placeholder="Search.." name="search" id="srch">
+      <button type="submit" id="btn"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="cards row">
+      <div class="col">
+        <div class="card" id="Mumbai">
+          <img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Mumbai">Mumbai</h5>
+            <p class="card-text">City of Dreams, Mumbai is the financial, commercial, and entertainment hub of India,
+              known for its bustling street life and the Bollywood film industry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://plus.unsplash.com/premium_photo-1697730414399-3d4d9ada98bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Kolkata">Kolkata</h5>
+            <p class="card-text">Known for its rich history and cultural heritage, Kolkata is the capital of the Indian
+              state of West Bengal. It is famous for its literature, art, and Durga Puja festival.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1551161242-b5af797b7233?q=80&w=2051&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Hyderabad">Hyderabad</h5>
+            <p class="card-text">Known for its rich history and biryani, Hyderabad is a major center for the technology
+              industry. The city blends tradition with modernity, featuring historical monuments alongside IT hubs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://plus.unsplash.com/premium_photo-1697729585263-29ebdcb972ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Bhopal">Bhopal</h5>
+            <p class="card-text">Bhopal, the capital of Madhya Pradesh, is known for its beautiful lakes and historical
+              architecture. It has a rich cultural heritage and is often referred to as the "City of Lakes."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://plus.unsplash.com/premium_photo-1697730410005-1d916de26345?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Ahmedabad">Ahmedabad</h5>
+            <p class="card-text">Ahmedabad, located in Gujarat, is renowned for its rich history and vibrant culture. It is a major center for trade and commerce in western India.</p>
+        </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Chennai">Chennai</h5>
+            <p class="card-text">Chennai, the capital of Tamil Nadu, is known for its vibrant culture and historical landmarks. The city is a hub for the Tamil film industry and boasts beautiful beaches.</p>
+        </div>
+
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1570605505301-0f713202ca7a?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Lucknow">Lucknow</h5>
+            <p class="card-text">Lucknow, the capital of Uttar Pradesh, is a city renowned for its historical monuments and rich cultural heritage, blending traditional charm with a modern atmosphere.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Bangalore">Bangalore</h5>
+            <p class="card-text">Bangalore, the Silicon Valley of India, is known for its tech parks, vibrant nightlife,
+              and pleasant weather. The city is a hub for the IT industry and startups.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1636739067155-643a5c678831?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Surat">Surat</h5>
+            <p class="card-text">Surat is a vibrant city in Gujarat, known for its diamond and textile industries. It boasts a mix of historical structures and modern amenities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Agra">Agra</h5>
+            <p class="card-text">Home to the iconic Taj Mahal, Agra is a city in Uttar Pradesh with a rich Mughal heritage, featuring splendid architecture and historical significance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="kashmir">Kashmir</h5>
+            <p class="card-text">Kashmir, often referred to as "Paradise on Earth," is a region in northern India known for its breathtaking landscapes, including pristine lakes and snow-capped mountains.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1558671440-cf07862e7b6e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Assam">Assam</h5>
+            <p class="card-text">Assam, in northeastern India, is celebrated for its tea plantations, diverse wildlife, and the mighty Brahmaputra River, offering a blend of natural beauty and cultural diversity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Delhi">Delhi</h5>
+            <p class="card-text">Delhi, the capital territory, is a dynamic metropolis with a blend of ancient and modern elements. It features historical landmarks like the Red Fort and India Gate alongside contemporary attractions.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top crd-img" alt="...">
+          <div class="card-body">
+            <h5 class="Jaipur">Jaipur</h5>
+            <p class="card-text">Jaipur, the Pink City of India, is the capital of Rajasthan, known for its vibrant architecture, including the Hawa Mahal and City Palace, as well as its rich cultural heritage.</p>
+          </div>
+        </div>
+      </div>
+      <!-- City Card 7 -->
+<div class="col">
+  <div class="card" id="Mussoorie">
+      <img
+          src="https://plus.unsplash.com/premium_photo-1661954540196-47f72de1a97c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="card-img-top crd-img" alt="...">
+      <div class="card-body">
+          <h5 class="Mussoorie">Mussoorie</h5>
+          <p class="card-text">Mussoorie, a hill station in the Indian state of Uttarakhand, is known for its
+              breathtaking landscapes and pleasant weather. It's a popular destination for nature lovers and
+              tourists.</p>
+      </div>
+  </div>
+</div>
+
+<!-- City Card 8 -->
+<div class="col">
+  <div class="card" id="Kerala">
+      <img
+          src="https://images.unsplash.com/photo-1555146076-0a81c716e171?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="card-img-top crd-img" alt="...">
+      <div class="card-body">
+          <h5 class="Kerala">Kerala</h5>
+          <p class="card-text">Kerala, often referred to as "God's Own Country," is a state in South India known for
+              its lush greenery, backwaters, and cultural heritage. It's a popular tourist destination for its
+              natural beauty and rich traditions.</p>
+      </div>
+  </div>
+</div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            let searchValue = document.getElementById("srch").value.toLowerCase();
+            let allCards = document.querySelectorAll('.col');
+            allCards.forEach(card => {
+                let cityName = card.querySelector('h5').innerText.toLowerCase();
+                if (cityName.includes(searchValue)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+        </script> 
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
